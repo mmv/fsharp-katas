@@ -1,11 +1,11 @@
 (* F# code kata *)
 
 (* typical hello world  *)
-let hello_world _ =
+let hello_world () =
     printfn "hello world!"
 
 (* fizzbuzz implementations *)
-let fizzbuzz_1 _ =
+let fizzbuzz_1 () =
     for n in {1..100} do
         if n % 15 = 0 then
             printfn "fizzbuzz"
@@ -17,7 +17,7 @@ let fizzbuzz_1 _ =
             printfn "%d" n
 
 (* fizzbuzz using pattern matching *)
-let fizzbuzz_2 _ =
+let fizzbuzz_2 () =
     let (|IsDivisor|_|) divisor n =
         if n % divisor = 0 then Some(n) else None
     
